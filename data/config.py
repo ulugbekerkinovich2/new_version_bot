@@ -5,9 +5,9 @@ env = Env()
 env.read_env()
 # DSN = "postgresql://postgres:0852@localhost:5432/order_bot"
 # .env fayl ichidan quyidagilarni o'qiymiz
-BOT_TOKEN = env.str("BOT_TOKEN")  # Bot toekn
-ADMINS = env.list("ADMINS")  # adminlar ro'yxati
-IP = env.str("ip")  # Xosting ip manzili
+BOT_TOKEN = os.environ.get('TOKEN')  # Bot toekn
+# ADMINS = env.list("ADMINS")  # adminlar ro'yxati
+ADMINS = os.environ.get("ADMINS")  # adminlar ro'yxati
 
 DB_USER = env.str("DB_USER")
 DB_PASS = env.str("DB_PASS")
